@@ -1,0 +1,50 @@
+{
+    "name": "InputMaster",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "301b40c7-988b-437b-aaf4-3e1e68c27ed2",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Value",
+                    "id": "8e2c8b5c-d626-4aba-a4d9-56b580df95c1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7a4f2356-e481-4835-9ea2-7bdc71d33991",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "KeyBoard /mouse",
+            "bindingGroup": "KeyBoard /mouse",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<VirtualMouse>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
