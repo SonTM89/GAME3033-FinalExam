@@ -20,7 +20,7 @@ public class DirtIsleBehaviour : MonoBehaviour
 
             if (timeCounter >= 1.0f && (int)timeCounter % 1 == 0)
             {
-                player.TakeDame(1.0f);
+                player.TakeDame(2.0f);
                 timeCounter = 0.0f;
             }
         }

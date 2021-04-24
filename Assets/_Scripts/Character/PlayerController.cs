@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,18 +15,32 @@ public class PlayerController : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public int diamondCount;
+    public int coinCount;
+    public int keyCount;
+
+    public TextMeshProUGUI diamondText;
+    public TextMeshProUGUI coinText;
+    public TextMeshProUGUI keyText;
+
 
     private void Start()
     {
         onReverseIsle = false;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        diamondCount = 0;
+        coinCount = 0;
+        keyCount = 0;
     }
 
 
     private void Update()
     {
-        
+        diamondText.text = diamondCount.ToString();
+        coinText.text = coinCount.ToString();
+        keyText.text = keyCount.ToString();
     }
 
 
