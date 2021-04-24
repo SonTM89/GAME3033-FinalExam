@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class MovementComponent : MonoBehaviour
 {
-    [SerializeField] private float walkSpeed;
-    [SerializeField] private float runSpeed;
-    [SerializeField] private float jumpForce;
+    [SerializeField] public float walkSpeed;
+    [SerializeField] public float runSpeed;
+    [SerializeField] public float jumpForce;
 
     // Components
     private PlayerController playerController;
@@ -42,7 +42,8 @@ public class MovementComponent : MonoBehaviour
         if (PauseMenu.isPaused) return;
         //Debug.Log(value.Get());
 
-        inputVector = value.Get<Vector2>();
+        //inputVector = value.Get<Vector2>();
+        inputVector = playerController.onReverseIsle == false ? value.Get<Vector2>() : -value.Get<Vector2>();
 
         playerAnimator.SetFloat(MovementXHash, inputVector.x);
         playerAnimator.SetFloat(MovementYHash, inputVector.y);
